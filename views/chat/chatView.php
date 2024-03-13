@@ -2,7 +2,7 @@
 session_start();
 
 if (strlen($_SESSION['userid']) == 0) {
-    header('location:../../index.phpd');
+    header('location:../../index.php');
 } else {
     ?>
     <html lang="fr">
