@@ -5,15 +5,11 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <title>Messagerie instantanee</title>
-    <!-- BOOTSTRAP CORE STYLE  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- FONT AWESOME STYLE  -->
-    <link href="assets/css/font-awesome.css" rel="stylesheet"/>
-    <!-- CUSTOM STYLE  -->
+    <link href="/chatmvc/assets/css/style.css" rel="stylesheet"/>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-<!--On inclue ici le menu de navigation includes/header.php-->
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-8 offset-md-3">
@@ -27,7 +23,7 @@
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-8 offset-md-3">
             <form method="post" action="login">
                 <div class="mb-3">
-                    <label for="email" class="form-label">Entrez votre pseudo</label>
+                    <label for="pseudo" class="form-label">Entrez votre pseudo</label>
                     <input type="text" class="form-control" name="pseudo" required>
                 </div>
                 <div class="mb-3">
@@ -36,7 +32,7 @@
                 </div>
                 <div class="mb-3">
                     <p>
-                        <a href="login/forgotpassword">Mot de passe oublié ?</a>
+                        <a href="/chatmvc/login/forgot">Mot de passe oublié ?</a>
                     </p>
                 </div>
                 <label for="vercode" class="form-label">Code de vérification:</label>
@@ -45,10 +41,10 @@
                            class="form-control col"
                            id="vercode" name="vercode" required
                     >
-                    <img class="form-text col-3" style="height:35px; width: auto" src="assets/captcha.php" alt="captcha">
+                    <img class="form-text col-3" style="height:35px; width: auto" src="/chatmvc/assets/captcha.php" alt="captcha">
                 </div>
                 <button type="submit" name="login" id="button" class="btn btn-info mb-3">LOGIN</button>
-                <a href="login/signup">Je n'ai pas de compte</a>
+                <a class="btn mb-3" href="/chatmvc/login/signup">Je n'ai pas de compte</a>
             </form>
         </div>
     </div>

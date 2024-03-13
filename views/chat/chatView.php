@@ -2,14 +2,14 @@
 session_start();
 
 if (strlen($_SESSION['userid']) == 0) {
-    header('location:../../index.php');
+    header('location:chatmvc/login/login');
 } else {
     ?>
     <html lang="fr">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Chat</title>
-        <link href="../../css/style.css" rel="stylesheet"/>
+        <link href="/chatmvc/assets/css/styleChat.css" rel="stylesheet"/>
     </head>
 
     <body>
@@ -24,7 +24,7 @@ if (strlen($_SESSION['userid']) == 0) {
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../../js/chat.js"></script>
+    <script type="text/javascript" src="/chatmvc/assets/js/chat.js"></script>
     </body>
 
     </html>
