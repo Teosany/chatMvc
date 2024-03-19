@@ -2,9 +2,9 @@
 
 class Model
 {
-    public PDO $connection;
+    public ?PDO $connection = null;
     public string $table;
-    public string $id;
+    public int $id;
 
     public function getOne()
     {
@@ -14,9 +14,6 @@ class Model
         return $query->fetch();
     }
 
-    /**
-     * Méthode permettant d'obtenir tous les enregistrements de la table choisie
-     */
     public function getAll(): array
     {
         $sql = "SELECT * FROM " . $this->table;
@@ -27,9 +24,6 @@ class Model
 
     /**
      * Retourne un article en fonction de son slug
-     *
-     * @param string $slug
-     * @return void
      */
     public function findBySlug(string $slug)
     {

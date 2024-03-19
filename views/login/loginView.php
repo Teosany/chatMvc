@@ -41,7 +41,8 @@
                            class="form-control col"
                            id="vercode" name="vercode" required
                     >
-                    <img class="form-text col-3" style="height:35px; width: auto" src="/chatmvc/assets/captcha.php" alt="captcha">
+                    <img class="form-text col-3" style="height:35px; width: auto" src="/chatmvc/assets/captcha.php"
+                         alt="captcha">
                 </div>
                 <button type="submit" name="login" id="button" class="btn btn-info mb-3">LOGIN</button>
                 <a class="btn mb-3" href="/chatmvc/login/signup">Je n'ai pas de compte</a>
@@ -57,6 +58,7 @@
         crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script></body>
+        crossorigin="anonymous"></script>
+</body>
 
 </html>

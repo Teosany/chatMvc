@@ -1,17 +1,17 @@
 <?php
 
-class loginController
+class loginController extends Controller
 {
-    protected LoginModel $oLoginModel;
+    protected ?LoginModel $oLoginModel = null;
 
     public function __construct()
     {
         $this->oLoginModel = new LoginModel();
         $this->oLoginModel->connection = new Database();
-        require_once(ROOT . 'assets/includes/header.php');
         if (isset($_SESSION['userid']) && $_SESSION['userid'] != '') {
             $_SESSION['userid'] = '';
             $_SESSION['color'] = '';
+            $_SESSION['user_name'] = '';
         }
     }
 
@@ -23,15 +23,22 @@ class loginController
             } else {
                 $userId = $this->oLoginModel->existsUser($_POST['pseudo'], $_POST['password']);
                 if ($userId > 0) {
-                    $_SESSION['userid'] = $userId;
-                    $colors = ['#007AFF', '#FF7000', '#FF7000', '#15E25F', '#CFC700', '#CFC700', '#CF1100', '#CF00BE', '#F00'];
-                    $_SESSION['color'] = $colors[array_rand($colors)];
+                    $_SESSION['userid'] = $userId[0];
+                    $_SESSION['user_name'] = $userId[1];
 
-                    header('location:/chatmvc/views/chat/chatView.php');
+                    if ($userId[2] !== null) {
+                        $_SESSION['color'] = $userId[2];
+                    } else {
+                        $colors = ['#007AFF', '#FF7000', '#FF7000', '#15E25F', '#CFC700', '#CFC700', '#CF1100', '#CF00BE', '#F00'];
+                        $_SESSION['color'] = $colors[array_rand($colors)];
+                    }
+
+                    header('location:/chatmvc/chat/chitChat/1');
                 }
             }
         }
-        require_once(ROOT . 'views/login/loginView.php');
+        require_once(ROOT . 'assets/includes/header.php');
+        $this->render('LoginView');
         require_once(ROOT . 'assets/includes/footer.php');
     }
 
@@ -48,11 +55,11 @@ class loginController
                     $colors = ['#007AFF', '#FF7000', '#FF7000', '#15E25F', '#CFC700', '#CFC700', '#CF1100', '#CF00BE', '#F00'];
                     $_SESSION['color'] = $colors[array_rand($colors)];
 
-                    header('location:/chatmvc/views/chat/chatView.php');
+                    header('location:/chatmvc/chat/chitchat/1');
                 }
             }
         }
-        require_once(ROOT . 'views/login/signupView.php');
+        $this->render('SignupView');
         require_once(ROOT . 'assets/includes/footer.php');
     }
 
@@ -67,7 +74,7 @@ class loginController
                 }
             }
         }
-        require_once(ROOT . 'views/login/forgotPasswordView.php');
+        $this->render('forgotPasswordView');
         require_once(ROOT . 'assets/includes/footer.php');
     }
 }

@@ -1,4 +1,4 @@
-<?php if (isset($_SESSION['login'])) : ?>
+<?php if (isset($_SESSION['userid'])) : ?>
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -8,26 +8,28 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="dashboard.php">TABLEAU DE BORD</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="my-profile.php">MON COMPTE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="issued-books.php">LIVRES EMPRUNTES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="change-password.php">CHANGER MON MOT DE PASSE</a>
-                    </li>
+                    <?php if (isset($navbar)) {
+                        foreach ($navbar as $item) { ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/chatmvc/chat/chitchat/<?=$item['id']?>"><?= $item['room_name'] ?></a>
+                            </li>
+                        <?php }
+                    } ?>
                 </ul>
             </div>
             <div class="right-div">
-                <a href="logout.php" class="btn btn-danger pull-right">DECONNEXION</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="change-password.php">Rechercher</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/chatmvc/login/login" class="btn btn-danger pull-right">DECONNEXION</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
-<?php ; else : ?>
+    <?php ; else : ?>
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"

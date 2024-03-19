@@ -2,14 +2,14 @@
 
 class loginModel extends Model
 {
-    public function existsUser($pseudo, $password)
+    public function existsUser($pseudo, $password): ?array
     {
         $sql = $this->connection->query(
-            "SELECT id FROM users WHERE user_name = '$pseudo' AND user_password = '$password'"
+            "SELECT u.id, user_name, msg_color FROM users u LEFT JOIN messages m ON m.msg_user_id = u.id WHERE user_name = '$pseudo' AND user_password = '$password'"
         );
 
         if (is_array($row = $sql->fetch())) {
-            return $row['id'];
+            return [$row['id'], $row['user_name'], $row['msg_color']];
         } else {
             return null;
         }
@@ -34,7 +34,7 @@ class loginModel extends Model
         }
 	}
 
-	public function retrievePassword($email, $pass)
+	public function retrievePassword($email, $pass): bool
     {
         $query = $this->connection->query("SELECT id FROM users WHERE user_email = '$email'")->fetch();
 
