@@ -31,7 +31,11 @@ if (isset($params[1])) {
         if (isset($params[2])) {
             $oController->$method($params[2]);
         } else {
-            $oController->$method();
+            if (isset($_POST)) {
+                $oController->$method($_POST);
+            } else {
+                $oController->$method();
+            }
         }
     } else {
         http_response_code(404);

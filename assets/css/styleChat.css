@@ -1,6 +1,6 @@
 .chat-wrapper {
     font: bold 11px/normal 'lucida grande', tahoma, verdana, arial, sans-serif;
-    background: #00a6bb;
+    background: #e3f2fd;
     padding: 20px;
     margin: 20px auto;
     box-shadow: 2px 2px 2px 0px #00000017;
@@ -39,6 +39,6 @@ input[type=text]#message {
 button#send-message {
     border: none;
     padding: 5px 15px;
-    background: #11e0fb;
+    background: #5c9ccc;
     box-shadow: 2px 2px 2px #0000001c;
 }
