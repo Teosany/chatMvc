@@ -1,12 +1,12 @@
 <?php
 
-class chatController extends Controller
+class ChatController extends Controller
 {
-    protected ?chatModel $oChatModel;
+    protected ?ChatModel $oChatModel;
 
     public function __construct()
     {
-        $this->oChatModel = new chatModel();
+        $this->oChatModel = new ChatModel();
         $this->oChatModel->connection = new Database();
     }
 

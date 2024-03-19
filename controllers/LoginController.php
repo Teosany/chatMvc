@@ -1,6 +1,6 @@
 <?php
 
-class loginController extends Controller
+class LoginController extends Controller
 {
     protected ?LoginModel $oLoginModel = null;
 

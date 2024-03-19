@@ -2,7 +2,7 @@
 
 class searchController extends Controller
 {
-    protected ?searchModel $oSearchModel;
+    protected ?SearchModel $oSearchModel;
 
     public function __construct()
     {

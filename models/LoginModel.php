@@ -1,6 +1,6 @@
 <?php
 
-class loginModel extends Model
+class LoginModel extends Model
 {
     public function existsUser($pseudo, $password): ?array
     {

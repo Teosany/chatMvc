@@ -1,6 +1,6 @@
 <?php
 
-class searchModel extends Model
+class SearchModel extends Model
 {
     public function searchMessages($search): array
     {
