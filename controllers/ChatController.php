@@ -22,7 +22,7 @@ class ChatController extends Controller
         $messages = $this->oChatModel->getMessages();
 
         require_once(ROOT . 'assets/includes/header.php');
-        require_once(ROOT . 'views/chat/chatView.php');
+        require_once(ROOT . 'views/chat/ChatView.php');
         require_once(ROOT . 'assets/includes/footer.php');
     }
     public function updateChat(int $userId, int $roomId, string $message, string $name, string $color, $date): void

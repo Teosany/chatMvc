@@ -21,7 +21,7 @@ class searchController extends Controller
         }
 
         require_once(ROOT . 'assets/includes/header.php');
-        require_once(ROOT . 'views/chat/searchView.php');
+        require_once(ROOT . 'views/chat/SearchView.php');
         require_once(ROOT . 'assets/includes/footer.php');
     }
 }
