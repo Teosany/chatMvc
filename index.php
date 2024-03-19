@@ -10,6 +10,7 @@ function loadClass($class): void
     }
     if (str_contains($class, 'Database')) {
         require 'models/' . $class . '.php';
+        error_log('a');
     }
 }
 
