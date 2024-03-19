@@ -10,7 +10,6 @@ function loadClass($class): void
     }
     if (str_contains($class, 'Database')) {
         require 'models/' . $class . '.php';
-        error_log('a');
     }
 }
 
@@ -43,7 +42,7 @@ if (isset($params[1])) {
         echo "La page recherchée n'existe pas";
     }
 } elseif (isset($_POST['message'])) {
-    $chatController = new chatController();
+    $chatController = new ChatController();
 
     date_default_timezone_set('Europe/Paris');
     $date = date("d/m/Y H:i:s");
@@ -55,7 +54,7 @@ if (isset($params[1])) {
 
     echo json_encode($response);
 } else {
-    $oController = new loginController();
+    $oController = new LoginController();
 
     $oController->login();
 }
