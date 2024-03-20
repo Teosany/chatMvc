@@ -1,8 +1,10 @@
 <?php
 
+namespace App\models;
+
 class Model
 {
-    public ?PDO $connection = null;
+    public ?\PDO $connection = null;
     public string $table;
     public int $id;
 
@@ -30,6 +32,6 @@ class Model
         $sql = "SELECT * FROM " . $this->table . " WHERE `slug`='" . $slug . "'";
         $query = $this->connection->prepare($sql);
         $query->execute();
-        return $query->fetch(PDO::FETCH_ASSOC);
+        return $query->fetch(\PDO::FETCH_ASSOC);
     }
 }

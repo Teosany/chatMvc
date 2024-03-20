@@ -1,5 +1,10 @@
 <?php
 
+namespace App\controllers;
+
+use App\models\Database;
+use App\models\SearchModel;
+
 class searchController extends Controller
 {
     protected ?SearchModel $oSearchModel;

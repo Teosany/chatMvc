@@ -1,34 +1,32 @@
 <?php
 session_start();
-function loadClass($class): void
-{
-    if (str_contains($class, 'Controller')) {
-        require 'controllers/' . $class . '.php';
-    }
-    if (str_contains($class, 'Model')) {
-        require 'models/' . $class . '.php';
-    }
-    if (str_contains($class, 'Database')) {
-        require 'models/' . $class . '.php';
-    }
-    if (str_contains($class, 'captcha')) {
-        require 'assets/' . $class . '.php';
-    }
-}
 
-spl_autoload_register('loadClass');
+spl_autoload_register(static function ($fqcn): void {
+    $path = sprintf('%s.php', str_replace(['App', '\\'], [__DIR__, '/'], $fqcn));
+
+    require_once $path;
+});
 
 define('ROOT', str_replace('index.php', '', $_SERVER['SCRIPT_FILENAME']));
+
+use App\controllers\ChatController;
+use App\controllers\LoginController;
+use App\controllers\SearchController;
 
 if (isset($_GET['action'])) {
     $params = explode('/', $_GET['action']);
 }
 
 if (isset($params[1])) {
-    $controller = $params[0] . "Controller";
     $method = $params[1];
 
-    $oController = new $controller();
+    if ($params[0] === 'login') {
+        $oController = new LoginController();
+    } elseif ($params[0] === 'chat') {
+        $oController = new ChatController();
+    } else {
+        $oController = new SearchController();
+    }
 
     if (method_exists($oController, $method)) {
         if (isset($params[2])) {
@@ -36,6 +34,8 @@ if (isset($params[1])) {
         } else {
             if (isset($_POST['search'])) {
                 $oController->$method($_POST);
+            } elseif ($params[0] === 'search') {
+                $oController->$method(',');
             } else {
                 $oController->$method();
             }

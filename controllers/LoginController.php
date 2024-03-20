@@ -1,5 +1,10 @@
 <?php
 
+namespace App\controllers;
+
+use App\models\Database;
+use App\models\LoginModel;
+
 class LoginController extends Controller
 {
     protected ?LoginModel $oLoginModel = null;
@@ -13,6 +18,7 @@ class LoginController extends Controller
             $_SESSION['color'] = '';
             $_SESSION['user_name'] = '';
         }
+        require_once(ROOT . 'assets/includes/header.php');
     }
 
     public function login(): void
@@ -37,9 +43,7 @@ class LoginController extends Controller
                 }
             }
         }
-        require_once(ROOT . 'assets/includes/header.php');
         require_once(ROOT . 'views/login/LoginView.php');
-//        $this->render('LoginView');
         require_once(ROOT . 'assets/includes/footer.php');
     }
 
@@ -56,11 +60,11 @@ class LoginController extends Controller
                     $colors = ['#007AFF', '#FF7000', '#FF7000', '#15E25F', '#CFC700', '#CFC700', '#CF1100', '#CF00BE', '#F00'];
                     $_SESSION['color'] = $colors[array_rand($colors)];
 
-                    header('location:/chatmvc/chat/chitchat/1');
+                    header('location:/chatmvc/Chat/chitChat/1');
                 }
             }
         }
-        $this->render('SignupView');
+        require_once(ROOT . 'views/login/SignupView.php');
         require_once(ROOT . 'assets/includes/footer.php');
     }
 
@@ -75,7 +79,7 @@ class LoginController extends Controller
                 }
             }
         }
-        $this->render('forgotPasswordView');
+        require_once(ROOT . 'views/login/ForgotPasswordView.php');
         require_once(ROOT . 'assets/includes/footer.php');
     }
 }

@@ -1,5 +1,10 @@
 <?php
 
+namespace App\controllers;
+
+use App\models\ChatModel;
+use App\models\Database;
+
 class ChatController extends Controller
 {
     protected ?ChatModel $oChatModel;

@@ -41,7 +41,7 @@
                            class="form-control col"
                            id="vercode" name="vercode" required
                     >
-                    <img class="form-text col-3" style="height:35px; width: auto" src="/assets/captcha.php" alt="captcha">
+                    <img class="form-text col-3" style="height:35px; width: auto" src="/chatmvc/assets/captcha.php" alt="captcha">
                 </div>
                 <button type="submit" name="login" id="button" class="btn btn-info mb-3">LOGIN</button>
                 <a class="btn mb-3" href="/chatmvc/login/signup">Je n'ai pas de compte</a>

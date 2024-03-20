@@ -1,5 +1,7 @@
 <?php
 
+namespace App\controllers;
+
 class Controller
 {
 	public function loadModel($model)

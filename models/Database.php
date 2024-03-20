@@ -1,12 +1,14 @@
 <?php
 
-class Database extends PDO
+namespace App\models;
+
+class Database extends \PDO
 {
     private string $DB_HOST = 'localhost';
     private string $DB_USER = 'root';
     private string $DB_PASS = 'root';
     private string $DB_NAME = 'messagerie';
-    public ?PDO $database = null;
+    public ?\PDO $database = null;
 
     public function __construct()
     {

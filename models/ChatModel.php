@@ -1,5 +1,7 @@
 <?php
 
+namespace App\models;
+
 class ChatModel extends Model
 {
 	public function insertMessage(int $userId, int $roomId, string $message, string $color, $date): void

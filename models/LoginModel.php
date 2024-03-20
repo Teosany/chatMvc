@@ -1,5 +1,7 @@
 <?php
 
+namespace App\models;
+
 class LoginModel extends Model
 {
     public function existsUser($pseudo, $password): ?array
@@ -21,9 +23,9 @@ class LoginModel extends Model
         VALUES (:name, :pass, :email)";
 
         $query = $this->connection->prepare($sql);
-        $query->bindParam(':name', $name, PDO::PARAM_STR);
-        $query->bindParam(':pass', $pass, PDO::PARAM_STR);
-        $query->bindParam(':email', $email, PDO::PARAM_STR);
+        $query->bindParam(':name', $name, \PDO::PARAM_STR);
+        $query->bindParam(':pass', $pass, \PDO::PARAM_STR);
+        $query->bindParam(':email', $email, \PDO::PARAM_STR);
 
         $query->execute() or die(false);
 
