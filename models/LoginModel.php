@@ -30,7 +30,7 @@ class LoginModel extends Model
         $query->execute() or die(false);
 
         if ($this->connection->lastInsertId() != NULL) {
-            return $this->connection->lastInsertId();
+            return [$this->connection->lastInsertId(), $name];
         } else {
             return null;
         }
