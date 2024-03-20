@@ -18,7 +18,6 @@ class LoginController extends Controller
             $_SESSION['color'] = '';
             $_SESSION['user_name'] = '';
         }
-        require_once(ROOT . 'assets/includes/header.php');
     }
 
     public function login(): void
@@ -43,6 +42,7 @@ class LoginController extends Controller
                 }
             }
         }
+        require_once(ROOT . 'assets/includes/header.php');
         require_once(ROOT . 'views/login/LoginView.php');
         require_once(ROOT . 'assets/includes/footer.php');
     }
@@ -66,6 +66,7 @@ class LoginController extends Controller
                 }
             }
         }
+        require_once(ROOT . 'assets/includes/header.php');
         require_once(ROOT . 'views/login/SignupView.php');
         require_once(ROOT . 'assets/includes/footer.php');
     }
@@ -81,6 +82,7 @@ class LoginController extends Controller
                 }
             }
         }
+        require_once(ROOT . 'assets/includes/header.php');
         require_once(ROOT . 'views/login/ForgotPasswordView.php');
         require_once(ROOT . 'assets/includes/footer.php');
     }
