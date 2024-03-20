@@ -31,7 +31,7 @@ if (isset($params[1])) {
         if (isset($params[2])) {
             $oController->$method($params[2]);
         } else {
-            if (isset($_POST)) {
+            if (isset($_POST['search'])) {
                 $oController->$method($_POST);
             } else {
                 $oController->$method();
