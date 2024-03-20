@@ -61,3 +61,4 @@ if (isset($params[1])) {
 
     $oController->login();
 }
+error_log('kdf');
