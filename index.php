@@ -11,6 +11,9 @@ function loadClass($class): void
     if (str_contains($class, 'Database')) {
         require 'models/' . $class . '.php';
     }
+    if (str_contains($class, 'captcha')) {
+        require 'assets/' . $class . '.php';
+    }
 }
 
 spl_autoload_register('loadClass');

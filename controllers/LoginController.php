@@ -38,7 +38,8 @@ class LoginController extends Controller
             }
         }
         require_once(ROOT . 'assets/includes/header.php');
-        $this->render('LoginView');
+        require_once(ROOT . 'views/login/LoginView.php');
+//        $this->render('LoginView');
         require_once(ROOT . 'assets/includes/footer.php');
     }
 
