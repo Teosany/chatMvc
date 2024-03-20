@@ -38,8 +38,8 @@ class LoginController extends Controller
                         $_SESSION['color'] = $colors[array_rand($colors)];
                     }
 
-                    header_remove();
-                    header('location:/chatmvc/chat/chitChat/1');
+//                    header('location:/chatmvc/chat/chitChat/1');
+                    echo "<script>location.href = '/chatmvc/chat/chitChat/1';</script>";
                 }
             }
         }
@@ -63,7 +63,6 @@ class LoginController extends Controller
                     $colors = ['#007AFF', '#FF7000', '#FF7000', '#15E25F', '#CFC700', '#CFC700', '#CF1100', '#CF00BE', '#F00'];
                     $_SESSION['color'] = $colors[array_rand($colors)];
 
-                    header_remove();
                     header('location:/chatmvc/chat/chitChat/1');
                 }
             }
@@ -80,7 +79,6 @@ class LoginController extends Controller
                 echo "<script>alert('Code de vérification incorrect')</script>";
             } else {
                 if (TRUE === $this->oLoginModel->retrievePassword($_POST['email'], $_POST['password'])) {
-                    header_remove();
                     header('location:login');
                 }
             }
