@@ -44,7 +44,7 @@
                     <img class="form-text col-3" style="height:35px; width: auto" src="/assets/captcha.php" alt="captcha">
                 </div>
                 <button type="submit" name="login" id="button" class="btn btn-info mb-3">LOGIN</button>
-                <a class="btn mb-3" href="login/signup">Je n'ai pas de compte</a>
+                <a class="btn mb-3" href="/login/signup">Je n'ai pas de compte</a>
             </form>
         </div>
     </div>
