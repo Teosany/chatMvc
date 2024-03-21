@@ -32,7 +32,7 @@
                 </div>
                 <div class="mb-3">
                     <p>
-                        <a href="/chatmvc/login/forgot">Mot de passe oublié ?</a>
+                        <a href="index.php?action=login/forgot">Mot de passe oublié ?</a>
                     </p>
                 </div>
                 <label for="vercode" class="form-label">Code de vérification:</label>
@@ -44,7 +44,7 @@
                     <img class="form-text col-3" style="height:35px; width: auto" src="/assets/captcha.php" alt="captcha">
                 </div>
                 <button type="submit" name="login" id="button" class="btn btn-info mb-3">LOGIN</button>
-                <a class="btn mb-3" href="/login/signup">Je n'ai pas de compte</a>
+                <a class="btn mb-3" href="index.php?action=login/signup">Je n'ai pas de compte</a>
             </form>
         </div>
     </div>
