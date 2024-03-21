@@ -15,6 +15,7 @@ use App\controllers\SearchController;
 
 if (isset($_GET['action'])) {
     $params = explode('/', $_GET['action']);
+    error_log($_GET['action']);
 }
 
 //if (isset($params[1])) {
@@ -100,4 +101,3 @@ if (isset($params[0])) {
 
     $oController->login();
 }
-error_log('kdf');
