@@ -73,7 +73,7 @@ function send_message() {
 
     let d0 = $.ajax({
         type: 'POST',
-        url: '/chatmvc/index.php',
+        url: 'index.php',
         data: msg,
     });
     $.when(d0).done(function (msg1) {
