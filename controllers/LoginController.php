@@ -38,8 +38,8 @@ class LoginController extends Controller
                         $_SESSION['color'] = $colors[array_rand($colors)];
                     }
 
-//                    header('location:/chatmvc/chat/chitChat/1');
-                    echo "<script>location.href = '/chatmvc/chat/chitChat/1';</script>";
+                    header('location:index.php?action=/chat/chitChat/1');
+//                    echo "<script>location.href = 'index.php?action=/chat/chitChat/1';</script>";
                 }
             }
         }

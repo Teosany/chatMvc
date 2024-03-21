@@ -46,7 +46,7 @@
                            class="form-control col"
                            id="vercode" name="vercode" required
                     >
-                    <img class="form-text col-3" style="height:35px; width: auto" src="/chatmvc/assets/captcha.php"
+                    <img class="form-text col-3" style="height:35px; width: auto" src="/assets/captcha.php"
                          alt="captcha">
                 </div>
                 <button type="submit" name="signup" id="button" class="btn btn-danger mb-3">ENREGISTER</button>

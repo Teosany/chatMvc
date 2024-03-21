@@ -12,7 +12,7 @@
                         foreach ($navbar as $item) { ?>
                             <li class="nav-item">
                                 <a class="nav-link"
-                                   href="/chatmvc/chat/chitchat/<?= $item['id'] ?>"><?= $item['room_name'] ?></a>
+                                   href="index.php?action=chat/chitChat/<?= $item['id'] ?>"><?= $item['room_name'] ?></a>
                             </li>
                         <?php }
                     } ?>
@@ -22,7 +22,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <div class="container-fluid">
-                            <form class="d-flex mb-3" role="search" method="post" action="/chatmvc/search/searchMessages">
+                            <form class="d-flex mb-3" role="search" method="post" action="index.php?action=search/searchMessages">
                                 <input type="search" name="search" class="form-control me-2" placeholder="Search" aria-label="Search">
                                 <button class="btn btn-outline-secondary" type="submit">Search</button>
                             </form>
@@ -30,7 +30,7 @@
                     </li>
                     <li class="nav-item">
                         <div class="container-fluid">
-                            <a href="/chatmvc/login/login" class="btn btn-outline-secondary link-danger pull-right">DECONNEXION</a>
+                            <a href="index.php?action=login/login" class="btn btn-outline-secondary link-danger pull-right">DECONNEXION</a>
                         </div>
                     </li>
                 </ul>
@@ -49,7 +49,11 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link"
-                                   href="/chatmvc/login/login">LOGIN</a>
+                                   href="index.php?action=login/login">LOGIN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="index.php?action=login/signup">SIGNUP</a>
                             </li>
                 </ul>
             </div>
