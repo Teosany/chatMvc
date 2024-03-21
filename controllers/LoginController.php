@@ -53,9 +53,7 @@ class LoginController extends Controller
             if ($_POST['vercode'] != $_SESSION['vercode']) {
                 echo "<script>alert('Code de vérification incorrect')</script>";
             } else {
-                error_log($_POST['pseudo'].$_POST['password'].$_POST['email']);
                 $userId = $this->oLoginModel->createUser($_POST['pseudo'], $_POST['password'], $_POST['email']);
-                error_log($userId);
 
                 if ($userId > 0) {
                     $_SESSION['userid'] = $userId[0];
