@@ -21,7 +21,7 @@
     </div>
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-8 offset-md-3">
-            <form method="post" action="signup" onSubmit="return valid()">
+            <form method="post" action="index.php?action=login/signup" onSubmit="return valid()">
                 <div class="mb-3">
                     <label for="pseudo" class="form-label">Entrez votre pseudo</label>
                     <input type="text" class="form-control" name="pseudo" required>

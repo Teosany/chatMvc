@@ -55,6 +55,7 @@ class LoginController extends Controller
             } else {
                 error_log($_POST['pseudo'].$_POST['password'].$_POST['email']);
                 $userId = $this->oLoginModel->createUser($_POST['pseudo'], $_POST['password'], $_POST['email']);
+                error_log($userId);
 
                 if ($userId > 0) {
                     $_SESSION['userid'] = $userId[0];
