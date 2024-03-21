@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <title>Messagerie instantanee</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/chatmvc/assets/css/style.css" rel="stylesheet"/>
+    <link href="/assets/css/style.css" rel="stylesheet"/>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -63,7 +63,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
-<script type="text/javascript" src="../js/valid.js"></script>
+<script type="text/javascript" src="/assets/js/valid.js"></script>
 
 </body>
 

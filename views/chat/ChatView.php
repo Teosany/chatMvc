@@ -11,8 +11,8 @@ if (!isset($_SESSION['userid']) || strlen($_SESSION['userid']) == 0) {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Chat</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="assets/css/style.css" rel="stylesheet"/>
-        <link href="assets/css/styleChat.css" rel="stylesheet"/>
+        <link href="/assets/css/style.css" rel="stylesheet"/>
+        <link href="/assets/css/styleChat.css" rel="stylesheet"/>
     </head>
 
     <body class="d-flex flex-column min-vh-100">
@@ -48,7 +48,7 @@ if (!isset($_SESSION['userid']) || strlen($_SESSION['userid']) == 0) {
 
 
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script type="text/javascript" src="assets/js/chat.js"></script>
+    <script type="text/javascript" src="/assets/js/chat.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
             integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
             crossorigin="anonymous"></script>

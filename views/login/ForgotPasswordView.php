@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <title>Messagerie instantanee</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/chatmvc/assets/css/style.css" rel="stylesheet"/>
+    <link href="/assets/css/style.css" rel="stylesheet"/>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -42,11 +42,11 @@
                            class="form-control col"
                            id="vercode" name="vercode" required
                     >
-                    <img class="form-text col-3" style="height:35px; width: auto" src="/chatmvc/assets/captcha.php"
+                    <img class="form-text col-3" style="height:35px; width: auto" src="/assets/captcha.php"
                          alt="captcha">
                 </div>
                 <button type="submit" name="forgot" id="button" class="btn btn-danger mb-3">CHANGE PASSWORD</button>
-                <a class="btn mb-3" href="/chatmvc/login/login">Login</a>
+                <a class="btn mb-3" href="index.php?action=login/login">Login</a>
             </form>
         </div>
     </div>
@@ -60,7 +60,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
-<script type="text/javascript" src="../js/valid.js"></script>
+<script type="text/javascript" src="/assets/js/valid.js"></script>
 
 </body>
 
