@@ -51,7 +51,9 @@ class loginController extends Controller
                 $userId = $this->oLoginModel->createUser($_POST['pseudo'], $_POST['password'], $_POST['email']);
 
                 if ($userId > 0) {
-                    $_SESSION['userid'] = $userId;
+                    $_SESSION['userid'] = $userId[0];
+                    $_SESSION['user_name'] = $userId[1];
+
                     $colors = ['#007AFF', '#FF7000', '#FF7000', '#15E25F', '#CFC700', '#CFC700', '#CF1100', '#CF00BE', '#F00'];
                     $_SESSION['color'] = $colors[array_rand($colors)];
 
@@ -59,6 +61,7 @@ class loginController extends Controller
                 }
             }
         }
+        require_once(ROOT . 'assets/includes/header.php');
         $this->render('SignupView');
         require_once(ROOT . 'assets/includes/footer.php');
     }
@@ -74,6 +77,7 @@ class loginController extends Controller
                 }
             }
         }
+        require_once(ROOT . 'assets/includes/header.php');
         $this->render('forgotPasswordView');
         require_once(ROOT . 'assets/includes/footer.php');
     }

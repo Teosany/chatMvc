@@ -1,4 +1,4 @@
-<?php if (isset($_SESSION['userid'])) : ?>
+<?php if (isset($_SESSION['userid']) && $_SESSION['userid'] !== '') : ?>
     <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -12,7 +12,7 @@
                         foreach ($navbar as $item) { ?>
                             <li class="nav-item">
                                 <a class="nav-link"
-                                   href="/chatmvc/chat/chitchat/<?= $item['id'] ?>"><?= $item['room_name'] ?></a>
+                                   href="/chatmvc/chat/chitChat/<?= $item['id'] ?>"><?= $item['room_name'] ?></a>
                             </li>
                         <?php }
                     } ?>
@@ -38,7 +38,7 @@
         </div>
     </nav>
     <?php ; else : ?>
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -46,15 +46,14 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="adminlogin.php">ADMINISTRATION</a>
+                        <a class="nav-link"
+                           href="/chatmvc/login/login">LOGIN</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="signup.php">CREER UN COMPTE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">LOGIN LECTEUR</a>
+                        <a class="nav-link"
+                           href="/chatmvc/login/signup">SIGNUP</a>
                     </li>
                 </ul>
             </div>
