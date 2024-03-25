@@ -1,7 +1,7 @@
 # Chat MVC
 A chat room developed as part of php/js/sql/WebSocket/MVC learning experience. For now, the test project is available online, without websocket technology
 
-View Live: [ https://online-lib.zeabur.app/](https://chat-mvc.zeabur.app/index.php?action=login/login)
+View Live: [ https://chat-mvc.zeabur.app ](https://chat-mvc.zeabur.app/index.php?action=login/login)
 
 Online library includes all the basic required pages for operation and functional state for user and administrator.
 
